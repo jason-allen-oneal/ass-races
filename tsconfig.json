@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"noImplicitReturns": true,
+		"module": "es6",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"target": "es5",
+		"allowJs": true,
+		"baseUrl": ".",
+	},
+	"include": [
+		"./src/typings.d.ts",
+		"./src/**/*",
+		"node_modules/@types/node/"
+	]
+}

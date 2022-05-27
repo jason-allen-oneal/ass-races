@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>{{pageTitle}} &bull; {{site.name}}</title>
+	<meta charset="iso-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</head>
+
+<body class="d-flex flex-column">
+	<main class="container">
+		{{{body}}}
+	</main>
+	<script>
+		let gameImages = [];
+		{{#each images}}
+		var obj = {
+			name: "{{name}}",
+			path: "{{path}}"
+		};
+		gameImages.push(obj);
+		{{/each}}
+		window.gameImages = gameImages;
+		
+		window.base = "{{site.base}}";
+	</script>
+	<script src="/assets/js/bundle.js" type="module"></script>
+</body>
+</html>
